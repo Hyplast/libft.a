@@ -6,16 +6,15 @@
 #    By: severi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 22:33:06 by severi            #+#    #+#              #
-#    Updated: 2021/11/03 23:33:57 by severi           ###   ########.fr        #
+#    Updated: 2021/11/07 23:04:42 by severi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strcmp.c srcs/ft_strlen.c \
- srcs/ft_swap.c
+SRC = srcs/*.c
 
-OBJ = ./*.o
+OBJ = *.o
 
 FLAG = -Wall -Wextra -Werror -I. -c
 
@@ -27,6 +26,8 @@ $(NAME): $(OBJ)
 
 $(OBJ): $(SRC)
 	@gcc $(FLAG) $(SRC)
+
+.PHONY:all
 
 clean:
 	@rm -f $(OBJ)

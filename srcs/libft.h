@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 20:04:58 by severi            #+#    #+#             */
-/*   Updated: 2021/11/07 22:47:46 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/08 00:15:40 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,9 @@ char	*ft_strdup(char *src);
 int		ft_strlen(char *str);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_bzero(void *s, size_t size);
+void	*ft_memalloc(size_t size);
 
 #endif
