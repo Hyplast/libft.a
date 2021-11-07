@@ -6,10 +6,11 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 00:33:23 by severi            #+#    #+#             */
-/*   Updated: 2021/11/02 00:57:42 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/07 20:27:55 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

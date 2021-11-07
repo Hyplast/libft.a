@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 16:58:23 by severi            #+#    #+#             */
-/*   Updated: 2021/11/07 20:51:41 by severi           ###   ########.fr       */
+/*   Created: 2021/11/07 20:04:58 by severi            #+#    #+#             */
+/*   Updated: 2021/11/07 21:13:49 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifdef LIBFT_H
+# define LIBFT_H
 
-void	ft_putchar(char c)
-{
-	ft_putchar_fd(c, 1);
-}
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
+int		ft_strcmp(char *s1, char *s2);
+char	*ft_strdup(char *src);
+int		ft_strlen(char *str);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
+
+#endif
