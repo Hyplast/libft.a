@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 20:04:58 by severi            #+#    #+#             */
-/*   Updated: 2021/11/08 00:15:40 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/08 01:12:52 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,8 @@ void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_bzero(void *s, size_t size);
 void	*ft_memalloc(size_t size);
+void	*ft_memset(void *s, int c, size_t size);
+void	ft_memdel(void	**ap);
+void	*ft_memcpy(void *dest, const void *src, size_t size);
 
 #endif
