@@ -12,6 +12,9 @@
 *.map
 *.exp
 
+#Swapped files
+*.swp
+
 # Precompiled Headers
 *.gch
 *.pch
