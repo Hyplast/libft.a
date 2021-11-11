@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 20:04:58 by severi            #+#    #+#             */
-/*   Updated: 2021/11/08 01:12:52 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/11 03:08:27 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
 int		ft_strcmp(char *s1, char *s2);
-char	*ft_strdup(char *src);
-int		ft_strlen(char *str);
+char	*ft_strdup(const char *src);
+size_t	ft_strlen(const char *s);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl(char const *s);
@@ -33,5 +33,15 @@ void	*ft_memalloc(size_t size);
 void	*ft_memset(void *s, int c, size_t size);
 void	ft_memdel(void	**ap);
 void	*ft_memcpy(void *dest, const void *src, size_t size);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t size);
+char	*ft_strnew(size_t size);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_strclr(char *s);
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_strdel(char **as);
+void	*memmove(void *dest, const void *src, size_t n);
+char	*strcpy(char *dest, const char *src);
 
 #endif

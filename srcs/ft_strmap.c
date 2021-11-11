@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 22:37:31 by severi            #+#    #+#             */
-/*   Updated: 2021/11/11 01:30:59 by severi           ###   ########.fr       */
+/*   Created: 2021/11/11 01:59:53 by severi            #+#    #+#             */
+/*   Updated: 2021/11/11 02:10:55 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	size_t	i;
+	unsigned int	i;
+	char			*mem;
 
+	mem = ft_strdup(s);
 	i = 0;
-	while (s[i] != '\0')
+	if (mem != 0)
 	{
-		i++;
+		while (mem[i] != '\0')
+		{
+			f(&mem[i]);
+			i++;
+		}
 	}
-	return (i);
+	return (mem);
 }

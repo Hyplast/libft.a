@@ -2,13 +2,15 @@
 
 
 void	test_memset(void);
+void	test_bzero(void);
+void	test_memcpy(void);
 
 int	main(void)
 {
 	test_memset();
-//	test_bzero();
-/*	test_memcpy();
-	test_memccpy();
+	test_bzero();
+	test_memcpy();
+	/*test_memccpy();
 	test_memmove();
 	test_memchr();
 	test_memcmp();

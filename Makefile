@@ -6,7 +6,7 @@
 #    By: severi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 22:33:06 by severi            #+#    #+#              #
-#    Updated: 2021/11/10 10:36:27 by severi           ###   ########.fr        #
+#    Updated: 2021/11/10 11:18:56 by severi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ TEST = test_main.a
 
 SRC = srcs/*.c
 
+INC = srcs/libft.h
+
 OBJ = *.o
 
 #OBJFILES := %.o: %.c Makefile
@@ -24,7 +26,7 @@ FLAG = -Wall -Wextra -Werror -I. -c
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(INC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
@@ -32,8 +34,7 @@ $(OBJ): $(SRC)
 	@gcc $(FLAG) $(SRC)
 
 test: $(NAME) 
-	@gcc -Wall -Wextra -Werror -o $(TEST) srcs/libft.h \
- tests/*.c -L. -lft
+	@gcc $(FLAGS) tests/*.c -o $(TEST) -L. -lft 
 
 .PHONY: all clean fclean re
 
