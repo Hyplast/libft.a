@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpy.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 03:11:14 by severi            #+#    #+#             */
-/*   Updated: 2021/11/11 03:13:18 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/12 14:28:43 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strcpy(char *dest, const char *src, size_t n)
+char	*ft_strcpy(char *dest, const char *src, size_t n)
 {
 	dest = ft_memcpy(dest, src, n);
 	return (dest);

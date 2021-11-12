@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 02:35:24 by severi            #+#    #+#             */
-/*   Updated: 2021/11/11 02:49:37 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/12 15:10:28 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,15 @@
 
 void	*memmove(void *dest, const void *src, size_t n)
 {
-	void	*mem;
-	size_t	i;
-
-	i = 0;
-	mem = ft_memalloc(n);
-	while (i < n)
+	if (dest < src)
+		ft_memcpy(dest, src, n);
+	else
 	{
-		mem[i] = src[i];
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		dest[i] = mem[i];
-		i++;
+		while (n)
+		{
+			n--;
+			*(unsigned char*)(dest + n) = *(unsigned char*)(src + n);
+		}
 	}
 	return (dest);
 }
