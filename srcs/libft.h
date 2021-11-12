@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 20:04:58 by severi            #+#    #+#             */
-/*   Updated: 2021/11/11 03:08:27 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/12 17:33:43 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_strdel(char **as);
 void	*memmove(void *dest, const void *src, size_t n);
 char	*strcpy(char *dest, const char *src);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strcat(char *dest, const char *src);
 
 #endif

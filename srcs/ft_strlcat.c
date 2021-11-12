@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 02:35:24 by severi            #+#    #+#             */
-/*   Updated: 2021/11/12 17:16:04 by severi           ###   ########.fr       */
+/*   Created: 2021/11/12 16:59:05 by severi            #+#    #+#             */
+/*   Updated: 2021/11/12 17:15:50 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t size)
+size_t	strlcat(char *dest, const char *src, size_t size)
 {
-	if (dest < src)
-		ft_memcpy(dest, src, size);
-	else
+	size_t	i;
+	size_t	dlen;
+	
+	i = 0;
+	dlen = ft_strlen(dest);
+	while (i < size)
 	{
-		while (size)
-		{
-			size--;
-			*(unsigned char *)(dest + size) = *(unsigned char *)(src + size);
-		}
+		dest[dlen + i] = src[i];
+		i++;
 	}
-	return (dest);
+	dest[dlen + i] = '\0';
+	return (dlen + i);
 }
