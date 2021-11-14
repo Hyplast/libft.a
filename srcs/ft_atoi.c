@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 20:55:13 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 23:57:52 by severi           ###   ########.fr       */
+/*   Created: 2021/11/14 20:47:18 by severi            #+#    #+#             */
+/*   Updated: 2021/11/14 20:58:59 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_atoi(const char *nptr)
 {
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = n * -1;
-	}
-	if (n / 10 > 0)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd(n % 10 + '0', fd);
+	long	over_int;
+	int		max_int;
+	int		i;
+	int		sign;
+	int		value;
+
+	i = 0;
+	sign = 1;
+	max_int ~= 0;
+	if (*nptr == '-')
+		sign *= (-1);
+	while(
+
+	return (sign*value);
 }

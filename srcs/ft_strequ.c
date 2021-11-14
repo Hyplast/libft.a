@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 20:55:13 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 23:57:52 by severi           ###   ########.fr       */
+/*   Created: 2021/11/14 22:00:34 by severi            #+#    #+#             */
+/*   Updated: 2021/11/14 22:04:40 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_strequ(const char *s1, const char *s2)
 {
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = n * -1;
-	}
-	if (n / 10 > 0)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd(n % 10 + '0', fd);
+	size_t	len;
+
+	if (ft_strlen(s1) > ft_strlen(s2))
+		len = ft_strlen(s1);
+	else
+		len = ft_strlen(s2);
+	return (ft_strnequ(s1, s2, len));
 }

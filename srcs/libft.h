@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 20:04:58 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 20:28:17 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/14 23:51:36 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,28 @@ void	ft_strdel(char **as);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	*ft_strtrim(const char *s);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strdup(const char *src);
 size_t	ft_strlen(const char *s);
+int		ft_atoi(const char *nptr);
+char	*ft_itoa(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_isdigit(int c);
+int		ft_isalpha(int c);
+int		ft_isalnum(int c);
+int		ft_isprint(int c);
+int		ft_isascii(int c);
+char	**ft_strsplit(const char *s, char c);
 
 #endif
