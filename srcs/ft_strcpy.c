@@ -6,13 +6,13 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 03:04:57 by severi            #+#    #+#             */
-/*   Updated: 2021/11/11 03:10:51 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/14 19:30:23 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	dest = ft_memcpy(dest, src, ft_strlen(src));
 	return (dest);

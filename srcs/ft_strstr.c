@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 03:11:14 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 19:32:42 by severi           ###   ########.fr       */
+/*   Created: 2021/11/14 18:26:10 by severi            #+#    #+#             */
+/*   Updated: 2021/11/14 20:07:10 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	dest = ft_memcpy(dest, src, n);
-	return (dest);
+	return (ft_strnstr(haystack, needle, ft_strlen(haystack)));
 }

@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 03:11:14 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 19:32:42 by severi           ###   ########.fr       */
+/*   Created: 2021/11/14 20:11:14 by severi            #+#    #+#             */
+/*   Updated: 2021/11/14 20:29:15 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	dest = ft_memcpy(dest, src, n);
-	return (dest);
+	return (ft_memcmp(s1, s2, n));
+/*
+**	int	i;
+**
+**	i = 0;§
+**	while (s1[i] != '\0')
+**	{
+**		if (s1[i] > s2[i])
+**			return (1);
+**		else if (s1[i] < s2[i])
+**			return (-1);
+**		i++;
+**	}
+**	if (s2[i] != '\0')
+**		return (-1);
+**	return (0);
+*/
 }

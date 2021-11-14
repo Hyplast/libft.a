@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 03:11:14 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 19:32:42 by severi           ###   ########.fr       */
+/*   Created: 2021/11/14 18:12:20 by severi            #+#    #+#             */
+/*   Updated: 2021/11/14 18:19:37 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+void	*ft_memrchr(const void *s, int c, size_t n)
 {
-	dest = ft_memcpy(dest, src, n);
-	return (dest);
+	char	*s_c;
+
+	s_c = (char *)s;
+	while (n > 0)
+	{
+		if (s_c[n] == c)
+		{
+			return (&(s_c[n]));
+		}
+		n--;
+	}
+	return (NULL);
 }

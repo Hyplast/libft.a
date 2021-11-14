@@ -6,26 +6,19 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:18:41 by severi            #+#    #+#             */
-/*   Updated: 2021/11/07 20:34:15 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/14 20:44:20 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int	i;
+	size_t	len;
 
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		if (s1[i] > s2[i])
-			return (1);
-		else if (s1[i] < s2[i])
-			return (-1);
-		i++;
-	}
-	if (s2[i] != '\0')
-		return (-1);
-	return (0);
+	if (ft_strlen(s1) > ft_strlen(s2))
+		len = ft_strlen(s1);
+	else
+		len = ft_strlen(s2);
+	return (ft_strncmp(s1, s2, len));
 }		
