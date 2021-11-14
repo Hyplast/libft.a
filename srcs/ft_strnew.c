@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:49:55 by severi            #+#    #+#             */
-/*   Updated: 2021/11/11 02:50:24 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/12 22:32:12 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return (ft_memalloc(size));
+	return ((char *)ft_memalloc(size + 1));
 }
