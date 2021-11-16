@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 20:47:18 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 20:58:59 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/15 14:41:06 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	ft_atoi(const char *nptr)
 {
-	long	over_int;
+	ft_strlen(nptr);
+	/*long	over_int;
 	int		max_int;
 	int		i;
 	int		sign;
@@ -27,5 +28,6 @@ int	ft_atoi(const char *nptr)
 		sign *= (-1);
 	while(
 
-	return (sign*value);
+	return (sign*value);*/
+	return (0);
 }

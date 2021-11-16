@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 23:34:15 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/15 14:44:41 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,13 @@
 char	**ft_strsplit(const char *s, char c)
 {
 	char	**spl_s;
-	int		start;
+	char	*c_s;
+
+	c_s = (char*)s;
+	spl_s = ft_memalloc(8);
+	spl_s[0][0] = c;
+	spl_s[1] = c_s;
+/*	int		start;
 	int		end;
 	int		i;
 	
@@ -36,6 +42,6 @@ char	**ft_strsplit(const char *s, char c)
 		}
 		i++;
 	}
-
+*/
 	return (spl_s);
 }
