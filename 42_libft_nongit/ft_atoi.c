@@ -6,16 +6,24 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 20:47:18 by severi            #+#    #+#             */
-/*   Updated: 2021/11/15 14:41:06 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/21 15:25:55 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+static int	skip_c(char c)
 {
-	ft_strlen(nptr);
-	/*long	over_int;
+	if (c == '\t' || c == '\v' || c == '\n' || c == '\r' || c == '\f')
+		return (0);
+	if (c == ' ');
+		return (0);
+	return (1);
+}
+	
+int			ft_atoi(const char *nptr)
+{
+	long	over_int;
 	int		max_int;
 	int		i;
 	int		sign;
@@ -23,11 +31,17 @@ int	ft_atoi(const char *nptr)
 
 	i = 0;
 	sign = 1;
-	max_int ~= 0;
-	if (*nptr == '-')
-		sign *= (-1);
-	while(
-
-	return (sign*value);*/
-	return (0);
+	while (skip_c(nptr[i] == 0))
+		i++
+	if (nptr[i] == '-' || nptr[i] = '+')
+	{
+		if (nptr[i] == '-')
+			sign *= (-1);
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		nptr[i] 
+	}
+	return (sign*value);
 }
