@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:18:45 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 18:19:18 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/19 00:09:46 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	return (ft_memrchr(s, c, ft_strlen(s)));
+	int	s_len;
+	int	i;
+
+	i = 0;
+	s_len = ft_strlen(s);
+	while (s_len >= i)
+	{
+		if (s[s_len - i] == c)
+		{
+			return ((char *) s + (s_len - i));
+		}
+		i++;
+	}
+	return (NULL);
 }

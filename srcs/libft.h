@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 20:04:58 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 23:51:36 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/18 23:15:03 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strsub(const char *s, unsigned int start, size_t len);
 char	*ft_strtrim(const char *s);
 char	*ft_strcat(char *dest, const char *src);
+char	*ft_strncat(char *dest, const char *src, size_t n);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);

@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 02:11:22 by severi            #+#    #+#             */
-/*   Updated: 2021/11/12 14:23:20 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/22 10:53:49 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		while (mem[i] != '\0')
 		{
-			f(i, mem[i]);
+			mem[i] = f(i, mem[i]);
 			i++;
 		}
 	}

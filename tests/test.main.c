@@ -1,16 +1,20 @@
 #include <stdio.h>
-
+#include "../srcs/libft.h"
 
 void	test_memset(void);
 void	test_bzero(void);
 void	test_memcpy(void);
+void	test_strnstr(void);
+void	test_atoi(void);
 
 int	main(void)
 {
+	test_atoi();
 	test_memset();
 	test_bzero();
 	test_memcpy();
-	/*test_memccpy();
+	test_strnstr();
+/*test_memccpy();
 	test_memmove();
 	test_memchr();
 	test_memcmp();
@@ -23,11 +27,9 @@ int	main(void)
 	test_strchr();
 	test_strrchr();
 	test_strstr();
-	test_strnstr();
-	test_strcmp();
+		test_strcmp();
 	test_strncmp();
-	test_atoi();
-	test_isalpha();
+		test_isalpha();
 	test_isdigit();
 	test_isalnum();
 	test_isascii();
