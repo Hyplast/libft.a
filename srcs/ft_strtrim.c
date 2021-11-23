@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 22:32:04 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 23:07:24 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/23 18:22:01 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,22 @@
 char	*ft_strtrim(const char *s)
 {
 	char	*trimmed;
-	int		i;
-	int		j;
-	int		len;
-	int		trim_len;
+	size_t	i;
+	size_t	len;
 
 	len = ft_strlen(s);
 	i = 0;
-	j = 0;
 	while (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
 		i++;
-	while (s[len] == '\n' || s[len] == ' ' || s[len] == '\t')
+	while (s[len - 1] == '\n' || s[len - 1] == ' ' || s[len - 1] == '\t')
 		len--;
-	trim_len = len - i;
-	trimmed = ft_strnew(trim_len);
+	if ((len - i) <= 0 || i >= len)
+	{
+		trimmed = ft_strnew(0);
+		return (trimmed);
+	}
+	trimmed = ft_strsub(s, i, (len - i));
 	if (trimmed == NULL)
 		return (NULL);
-	while (j < trim_len)
-		trimmed[j++] = s[i];
 	return (trimmed);
 }

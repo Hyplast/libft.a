@@ -6,7 +6,8 @@ void	test_bzero(void);
 void	test_memcpy(void);
 void	test_strnstr(void);
 void	test_atoi(void);
-
+void	test_strsplit(void);
+	
 int	main(void)
 {
 	test_atoi();
@@ -14,6 +15,7 @@ int	main(void)
 	test_bzero();
 	test_memcpy();
 	test_strnstr();
+	test_strsplit();
 /*test_memccpy();
 	test_memmove();
 	test_memchr();
