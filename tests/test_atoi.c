@@ -9,7 +9,7 @@ void	test_atoi(void)
 	if (atoi("-422") == ft_atoi("-422"))
 		printf(" PASS\n");
 	else 
-		printf(" FAIL: %i\n", ft_atoi("-422"));
+		printf(" FAIL: %i\n", atoi("-422"));
 
 
 }
