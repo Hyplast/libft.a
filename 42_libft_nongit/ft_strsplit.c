@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/11/25 13:13:39 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/25 16:46:08 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,13 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-char	**ft_strsplit(const char *s, char c)
+static void	fill_array(const char *s, char c, char **spl_s, int j)
 {
-	char	**spl_s;
-	int		start;
-	int		i;
-	int		j;
-	int		words;
+	int	i;
+	int	start;
 
 	i = 0;
-	j = 0;
 	start = -1;
-	words = count_words(s, c);
-	ft_putstr("Words:  ");
-	ft_putnbr(words);
-	ft_putchar('\n');
-	spl_s = (char **)malloc(sizeof(spl_s) * (words + 1));
 	while (s[i] != '\0')
 	{
 		if (s[i] == c || s[i + 1] == '\0')
@@ -59,7 +50,10 @@ char	**ft_strsplit(const char *s, char c)
 				start = i + 1;
 			else if (start != -1)
 			{
-				spl_s[j++] = ft_strsub(s, start, (i - start));
+				if (s[i + 1] == '\0')
+					spl_s[j++] = ft_strsub(s, start, (i + 1 - start));
+				else
+					spl_s[j++] = ft_strsub(s, start, (i - start));
 				start = -1;
 			}
 		}
@@ -67,5 +61,13 @@ char	**ft_strsplit(const char *s, char c)
 			start = i;
 		i++;
 	}
+}
+
+char	**ft_strsplit(const char *s, char c)
+{
+	char	**spl_s;
+
+	spl_s = (char **)malloc(sizeof(spl_s) * (count_words(s, c) + 1));
+	fill_array(s, c, spl_s, 0);
 	return (spl_s);
 }
