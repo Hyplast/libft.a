@@ -7,7 +7,8 @@ void	test_memcpy(void);
 void	test_strnstr(void);
 void	test_atoi(void);
 void	test_strsplit(void);
-	
+void	test_itoa(void);
+
 int	main(void)
 {
 	test_atoi();
@@ -16,6 +17,7 @@ int	main(void)
 	test_memcpy();
 	test_strnstr();
 	test_strsplit();
+	test_itoa();
 /*test_memccpy();
 	test_memmove();
 	test_memchr();

@@ -6,13 +6,13 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/11/25 16:46:08 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/26 00:25:00 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	words;
 	int	i;
@@ -35,39 +35,45 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-static void	fill_array(const char *s, char c, char **spl_s, int j)
+static int	ft_word_len(char const *s, char c)
+{
+	int	len;
+
+	len = 0;
+	while(s[len] != '\0' && s[len] != c)
+	{
+		len++;
+	}
+	return (len);
+}
+
+static void	ft_fill_array(const char *s, char c, char **spl_s, int words)
 {
 	int	i;
-	int	start;
+	int word_len;
+	int	j;
 
+	j = 0;
 	i = 0;
-	start = -1;
-	while (s[i] != '\0')
+	word_len = 0;
+	while (words > 0)
 	{
-		if (s[i] == c || s[i + 1] == '\0')
-		{
-			if (start == -1)
-				start = i + 1;
-			else if (start != -1)
-			{
-				if (s[i + 1] == '\0')
-					spl_s[j++] = ft_strsub(s, start, (i + 1 - start));
-				else
-					spl_s[j++] = ft_strsub(s, start, (i - start));
-				start = -1;
-			}
-		}
-		else if (start == -1)
-			start = i;
-		i++;
+		while (s[i] == c)
+			i++;
+		word_len = ft_word_len(s + i, c);
+		spl_s[j++] = ft_strsub(s, i, word_len);
+		i += word_len;
+		words--;
 	}
 }
 
 char	**ft_strsplit(const char *s, char c)
 {
 	char	**spl_s;
+	int		words;
 
-	spl_s = (char **)malloc(sizeof(spl_s) * (count_words(s, c) + 1));
-	fill_array(s, c, spl_s, 0);
+	words = ft_count_words(s, c);
+	spl_s = (char **)malloc(sizeof(spl_s) * (words + 1));
+	ft_fill_array(s, c, spl_s, words);
 	return (spl_s);
 }
