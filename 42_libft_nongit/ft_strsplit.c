@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/11/26 00:25:00 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/26 00:33:12 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	ft_word_len(char const *s, char c)
 	int	len;
 
 	len = 0;
-	while(s[len] != '\0' && s[len] != c)
+	while (s[len] != '\0' && s[len] != c)
 	{
 		len++;
 	}
@@ -50,7 +50,7 @@ static int	ft_word_len(char const *s, char c)
 static void	ft_fill_array(const char *s, char c, char **spl_s, int words)
 {
 	int	i;
-	int word_len;
+	int	word_len;
 	int	j;
 
 	j = 0;
@@ -74,6 +74,8 @@ char	**ft_strsplit(const char *s, char c)
 
 	words = ft_count_words(s, c);
 	spl_s = (char **)malloc(sizeof(spl_s) * (words + 1));
+	if (spl_s == NULL)
+		return (NULL);
 	ft_fill_array(s, c, spl_s, words);
 	return (spl_s);
 }
