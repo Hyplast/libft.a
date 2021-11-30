@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 01:54:17 by severi            #+#    #+#             */
-/*   Updated: 2021/11/11 01:59:47 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 14:37:40 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	ft_bzero(s, ft_strlen(s));
+	if (s != NULL)
+		ft_bzero(s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/11/30 11:31:19 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 18:25:57 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ char	**ft_strsplit(const char *s, char c)
 	char	**spl_s;
 	size_t	words;
 
+	if (s == NULL)
+		return (NULL);
 	words = ft_count_words(s, c);
 	spl_s = (char **)malloc(sizeof(spl_s) * (words + 1));
 	if (spl_s == NULL)

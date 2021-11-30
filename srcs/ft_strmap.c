@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 01:59:53 by severi            #+#    #+#             */
-/*   Updated: 2021/11/22 10:53:51 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 14:56:30 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	mem = ft_strdup(s);
 	i = 0;
-	if (mem != 0)
+	if (mem != NULL)
 	{
 		while (mem[i] != '\0')
 		{

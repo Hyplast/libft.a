@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 17:18:46 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 17:32:36 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 15:05:49 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	len_s1;
 	size_t	i;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	i = 0;
 	len_s1 = ft_strlen(s1);
 	len_s3 = len_s1 + ft_strlen(s2);

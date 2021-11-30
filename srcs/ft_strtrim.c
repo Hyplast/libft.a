@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 22:32:04 by severi            #+#    #+#             */
-/*   Updated: 2021/11/30 11:02:25 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 18:02:44 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(const char *s)
 	size_t	i;
 	size_t	len;
 
+	if (s == NULL)
+		return (NULL);
 	len = ft_strlen(s);
 	i = 0;
 	while (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
@@ -30,7 +32,5 @@ char	*ft_strtrim(const char *s)
 		return (trimmed);
 	}
 	trimmed = ft_strsub(s, (unsigned int) i, (len - i));
-	if (trimmed == NULL)
-		return (NULL);
 	return (trimmed);
 }

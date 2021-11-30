@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:52:51 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 17:30:41 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 12:14:44 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (s_c[i] == c)
 		{
-			return (&(s_c[i]));
+			return ((void *) s + i);
 		}
 		i++;
 	}

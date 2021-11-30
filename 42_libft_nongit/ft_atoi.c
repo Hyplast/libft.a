@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 20:47:18 by severi            #+#    #+#             */
-/*   Updated: 2021/11/22 10:05:29 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 10:35:08 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ int	ft_atoi(const char *nptr)
 		value = value * 10 + nptr[i] - '0';
 		i++;
 	}
-	return (sign * value);
+	return ((int)(sign * value));
 }
