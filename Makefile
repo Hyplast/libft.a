@@ -6,7 +6,7 @@
 #    By: severi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 22:33:06 by severi            #+#    #+#              #
-#    Updated: 2021/11/22 09:44:47 by severi           ###   ########.fr        #
+#    Updated: 2021/11/30 10:32:54 by severi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJ = *.o
 
 #OBJFILES := %.o: %.c Makefile
 
-FLAG = -g -Wall -Wextra -Werror -I. -c
+FLAG = -g -Wall -Wconversion -Wextra -Werror -I. -c
 
 all: $(NAME)
 

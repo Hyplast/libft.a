@@ -6,17 +6,17 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/11/26 00:33:12 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:31:19 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
-	int	words;
-	int	i;
-	int	begin;
+	size_t	words;
+	size_t	i;
+	size_t	begin;
 
 	begin = 0;
 	i = 0;
@@ -35,9 +35,9 @@ static int	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-static int	ft_word_len(char const *s, char c)
+static size_t	ft_word_len(char const *s, char c)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] != '\0' && s[len] != c)
@@ -47,11 +47,11 @@ static int	ft_word_len(char const *s, char c)
 	return (len);
 }
 
-static void	ft_fill_array(const char *s, char c, char **spl_s, int words)
+static void	ft_fill_array(const char *s, char c, char **spl_s, size_t words)
 {
-	int	i;
-	int	word_len;
-	int	j;
+	size_t	i;
+	size_t	word_len;
+	size_t	j;
 
 	j = 0;
 	i = 0;
@@ -61,7 +61,7 @@ static void	ft_fill_array(const char *s, char c, char **spl_s, int words)
 		while (s[i] == c)
 			i++;
 		word_len = ft_word_len(s + i, c);
-		spl_s[j++] = ft_strsub(s, i, word_len);
+		spl_s[j++] = ft_strsub(s, (unsigned int) i, word_len);
 		i += word_len;
 		words--;
 	}
@@ -70,7 +70,7 @@ static void	ft_fill_array(const char *s, char c, char **spl_s, int words)
 char	**ft_strsplit(const char *s, char c)
 {
 	char	**spl_s;
-	int		words;
+	size_t	words;
 
 	words = ft_count_words(s, c);
 	spl_s = (char **)malloc(sizeof(spl_s) * (words + 1));

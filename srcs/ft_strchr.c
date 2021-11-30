@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 17:59:00 by severi            #+#    #+#             */
-/*   Updated: 2021/11/19 13:40:02 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 10:57:35 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	s_len;
-	int	i;
+	size_t	s_len;
+	size_t	i;
 
 	i = 0;
 	s_len = ft_strlen(s);

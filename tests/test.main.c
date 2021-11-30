@@ -8,6 +8,8 @@ void	test_strnstr(void);
 void	test_atoi(void);
 void	test_strsplit(void);
 void	test_itoa(void);
+void	test_memcmp(void);
+void	test_strncmp(void);
 
 int	main(void)
 {
@@ -18,11 +20,12 @@ int	main(void)
 	test_strnstr();
 	test_strsplit();
 	test_itoa();
+	test_memcmp();
+	test_strncmp();
 /*test_memccpy();
 	test_memmove();
 	test_memchr();
-	test_memcmp();
-	test_strlen();
+		test_strlen();
 	test_strdup();
 	test_strcpy();
 	test_strcat();
@@ -32,7 +35,6 @@ int	main(void)
 	test_strrchr();
 	test_strstr();
 		test_strcmp();
-	test_strncmp();
 		test_isalpha();
 	test_isdigit();
 	test_isalnum();

@@ -21,7 +21,7 @@ void	test_strnstr(void)
 		printf("NULL");
 	else
 		printf(str);
-	printf(" :received - expected: dolor sit amet \n TEST2: ");
+	printf(" :received - expected: NULL \n TEST2: ");
 	if (!(str2 = ft_strnstr("lorem ipsum dolor sit amet", "lorem", 15)))
 			printf("NULL");
 		else
@@ -66,7 +66,7 @@ if (!(str10 = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 10)))
 			printf("NULL");
 		else
 			printf(str10);
-		printf(" :received - expected: NULL \n TEST10");
+		printf(" :received - expected: NULL \n TEST10: ");
 if (!(str11 = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0)))
 			printf("NULL");
 		else

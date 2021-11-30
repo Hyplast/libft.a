@@ -6,19 +6,19 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 23:36:49 by severi            #+#    #+#             */
-/*   Updated: 2021/11/08 00:40:33 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:42:10 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*c;
 
 	i = 0;
 	c = (char *)s;
-	while (i < size)
+	while (i < n)
 		c[i++] = '\0';
 }

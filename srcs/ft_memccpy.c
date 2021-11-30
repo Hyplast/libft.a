@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 01:35:14 by severi            #+#    #+#             */
-/*   Updated: 2021/11/19 13:31:54 by severi           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:50:37 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		d[i] = s[i];
 		if (s[i] == c)
-			return ((char *) dest + i + 1);
+			return (dest + i + 1);
 		i++;
 	}
 	return (NULL);
