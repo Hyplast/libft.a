@@ -10,6 +10,14 @@ void	test_strsplit(void);
 void	test_itoa(void);
 void	test_memcmp(void);
 void	test_strncmp(void);
+void	test_memccpy(void);
+void	test_itoa(void);
+void	test_strstr(void);
+void	test_tolower(void);
+void	test_toupper(void);
+void	test_strjoin(void);
+void	test_memmove(void);
+void	test_isalnum(void);
 
 int	main(void)
 {
@@ -22,10 +30,18 @@ int	main(void)
 	test_itoa();
 	test_memcmp();
 	test_strncmp();
-/*test_memccpy();
+	test_memccpy();
 	test_memmove();
+	test_isalnum();
+	test_toupper();
+	test_tolower();
+	test_strncmp();
+	test_strjoin();
+	test_strstr();
+/*
+
 	test_memchr();
-		test_strlen();
+	test_strlen();
 	test_strdup();
 	test_strcpy();
 	test_strcat();
@@ -33,15 +49,11 @@ int	main(void)
 	test_strlcat();
 	test_strchr();
 	test_strrchr();
-	test_strstr();
-		test_strcmp();
-		test_isalpha();
+	test_strcmp();
+	test_isalpha();
 	test_isdigit();
-	test_isalnum();
 	test_isascii();
 	test_isprint();
-	test_toupper();
-	test_tolower();
 */
 	return (0);
 }
