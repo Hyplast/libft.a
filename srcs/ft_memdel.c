@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 00:44:43 by severi            #+#    #+#             */
-/*   Updated: 2021/11/30 14:36:48 by severi           ###   ########.fr       */
+/*   Updated: 2021/12/05 17:25:20 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_memdel(void	**ap)
 {
-	if (*ap != NULL)
+	if (ap == NULL)
+		return ;
+	else if (*ap != NULL)
 	{
 		free(*ap);
 		*ap = NULL;

@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:18:58 by severi            #+#    #+#             */
-/*   Updated: 2021/11/14 23:08:01 by severi           ###   ########.fr       */
+/*   Updated: 2021/12/05 17:30:31 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len)
 	char	*subs;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	subs = ft_strnew(len);
 	if (subs == NULL)
 		return (NULL);

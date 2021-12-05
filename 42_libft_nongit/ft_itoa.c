@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:47:48 by severi            #+#    #+#             */
-/*   Updated: 2021/11/30 10:56:21 by severi           ###   ########.fr       */
+/*   Updated: 2021/12/05 14:56:05 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ char	*ft_itoa(int c)
 
 	value = c;
 	digits = count_digits(value);
+	s = ft_strnew(digits);
+	if (s == NULL)
+		return (NULL);
 	if (c < 0)
 	{
-		s = ft_strnew(digits);
 		s[0] = '-';
 		value *= -1;
 	}
-	else
-		s = ft_strnew(digits);
 	if (c == 0)
 		s[0] = '0';
 	while (value > 0)

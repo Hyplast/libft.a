@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/11/30 18:25:57 by severi           ###   ########.fr       */
+/*   Updated: 2021/12/05 17:19:24 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,19 @@ static size_t	ft_word_len(char const *s, char c)
 	return (len);
 }
 
-static void	ft_fill_array(const char *s, char c, char **spl_s, size_t words)
+static void	free_array(char **spl_s)
+{
+	size_t	i;
+
+	i = 0;
+	while (spl_s[i])
+	{
+		ft_strdel(&spl_s[i]);
+		i++;
+	}
+}
+
+static int	ft_fill_array(const char *s, char c, char **spl_s, size_t words)
 {
 	size_t	i;
 	size_t	word_len;
@@ -61,10 +73,17 @@ static void	ft_fill_array(const char *s, char c, char **spl_s, size_t words)
 		while (s[i] == c)
 			i++;
 		word_len = ft_word_len(s + i, c);
-		spl_s[j++] = ft_strsub(s, (unsigned int) i, word_len);
+		spl_s[j] = ft_strsub(s, (unsigned int) i, word_len);
+		if (spl_s[j++] == NULL)
+		{
+			free_array(spl_s);
+			return (-1);
+		}
 		i += word_len;
 		words--;
 	}
+	spl_s[j] = NULL;
+	return (j);
 }
 
 char	**ft_strsplit(const char *s, char c)
@@ -78,6 +97,7 @@ char	**ft_strsplit(const char *s, char c)
 	spl_s = (char **)malloc(sizeof(spl_s) * (words + 1));
 	if (spl_s == NULL)
 		return (NULL);
-	ft_fill_array(s, c, spl_s, words);
+	if (ft_fill_array(s, c, spl_s, words) == -1)
+		return (NULL);
 	return (spl_s);
 }
