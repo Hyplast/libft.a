@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 17:18:46 by severi            #+#    #+#             */
-/*   Updated: 2021/11/30 15:05:49 by severi           ###   ########.fr       */
+/*   Updated: 2021/12/05 14:43:53 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,14 @@ char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*s3;
 	size_t	len_s3;
-	size_t	len_s1;
-	size_t	i;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	i = 0;
-	len_s1 = ft_strlen(s1);
-	len_s3 = len_s1 + ft_strlen(s2);
+	len_s3 = ft_strlen(s1) + ft_strlen(s2);
 	s3 = ft_strnew(len_s3);
-	while (i < len_s1)
-	{
-		s3[i] = s1[i];
-		i++;
-	}
+	if (s3 == NULL)
+		return (NULL);
+	s3 = ft_strcpy(s3, s1);
 	s3 = ft_strcat(s3, s2);
-	s3[len_s3] = '\0';
 	return (s3);
 }

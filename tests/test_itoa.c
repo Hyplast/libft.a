@@ -8,7 +8,8 @@ void	test_itoa(void)
 	printf("  TEST2 - ft_itoa(6) : %s\n", ft_itoa(6));
 	printf(" TEST3 - ft_itoa(-6) : %s\n", ft_itoa(-6));
 	printf("  TEST4 - ft_itoa(16) : %s\n", ft_itoa(16));
-	printf(" TEST5 - ft_itoa(-16) : %s\n", ft_itoa(-16));
+	char *i1 = ft_itoa(-1234);
+	printf(" TEST5 - ft_itoa(-1234) : %s\n", i1);
 	printf("  TEST6 - ft_itoa(-2147483648) : %s\n", ft_itoa(-2147483648));
 	printf(" TEST7 - ft_itoa(2147483647) : %s\n", ft_itoa(2147483647));
 }
