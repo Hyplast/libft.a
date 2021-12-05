@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 23:09:39 by severi            #+#    #+#             */
-/*   Updated: 2021/12/05 17:19:24 by severi           ###   ########.fr       */
+/*   Updated: 2021/12/05 18:57:50 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static int	ft_fill_array(const char *s, char c, char **spl_s, size_t words)
 {
 	size_t	i;
 	size_t	word_len;
-	size_t	j;
+	int		j;
 
 	j = 0;
 	i = 0;
