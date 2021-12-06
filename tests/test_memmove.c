@@ -30,11 +30,11 @@ void	test_memmove(void)
 	memmove(buff1, src, 21);
 	ft_memmove(buff2, src, 21);
 	printf ("memmove(buff1, src, 21) = %s ||  ft_memmove(buff2, src, 21); = %s" , buff1, buff2);
-	printf("\nTEST 2: ft_memmove( buff1, (void*)0, 3);\n");
-	ft_memmove( buff1, (void*)0, 3);
-	printf("TEST 3: \n");
-	char b[0xF0];
+	//printf("\nTEST 2: ft_memmove( buff1, (void*)0, 3);\n");
+	//ft_memmove( buff1, (void*)0, 3);
+	//printf("TEST 3: \n");
+	//char b[0xF0];
 
-	ft_memmove(b, ((void*)0), 5);
+	//ft_memmove(b, ((void*)0), 5);
 	
 }

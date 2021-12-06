@@ -18,6 +18,7 @@ void	test_toupper(void);
 void	test_strjoin(void);
 void	test_memmove(void);
 void	test_isalnum(void);
+void	test_memchr(void);
 
 int	main(void)
 {
@@ -35,13 +36,10 @@ int	main(void)
 	test_isalnum();
 	test_toupper();
 	test_tolower();
-	test_strncmp();
 	test_strjoin();
 	test_strstr();
-/*
-
 	test_memchr();
-	test_strlen();
+	/*test_strlen();
 	test_strdup();
 	test_strcpy();
 	test_strcat();
