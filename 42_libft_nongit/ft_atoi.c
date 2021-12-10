@@ -6,7 +6,7 @@
 /*   By: severi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 20:47:18 by severi            #+#    #+#             */
-/*   Updated: 2021/12/05 16:31:25 by severi           ###   ########.fr       */
+/*   Updated: 2021/12/10 13:09:04 by severi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static int	skip_c(char c)
 
 int	ft_atoi(const char *nptr)
 {
-	int		i;
-	int		sign;
-	long	value;
+	int				i;
+	int				sign;
+	unsigned long	value;
 
 	i = 0;
 	sign = 1;
@@ -42,6 +42,10 @@ int	ft_atoi(const char *nptr)
 	{
 		value = value * 10 + nptr[i] - '0';
 		i++;
+		if (sign == 1 && value > 9223372036854775807)
+			return (-1);
+		if (sign == -1 && value > 9223372036854775807)
+			return (0);
 	}
 	return ((int)(sign * value));
 }
