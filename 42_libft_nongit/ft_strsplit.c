@@ -57,6 +57,7 @@ static void	free_array(char **spl_s)
 		ft_strdel(&spl_s[i]);
 		i++;
 	}
+	free(spl_s);
 }
 
 static int	ft_fill_array(const char *s, char c, char **spl_s, size_t words)
